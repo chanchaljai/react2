@@ -1,5 +1,12 @@
-function App(){
-  return "Hello ye kam kr rha hai App export ho rha hai aur main se app print ho rha hai"
+import React from 'react'
+
+ function App() {
+  return (
+    <div className='main'> 
+      <h1>hello</h1>  
+      <h2>Hello h2</h2>
+    </div>
+  )
 }
 
 export default App
