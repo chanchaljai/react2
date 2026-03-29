@@ -1,10 +1,18 @@
 import React from 'react'
 
- function App() {
+function App() {
+
+    const abc = ()=> {
+        console.log("hello")
+    }
+    
+
+
+  const user = "jaiswal"
   return (
-    <div className='main'> 
-      <h1>hello</h1>  
-      <h2>Hello h2</h2>
+    <div className='main'>my user name is {user}
+
+      <button onClick={abc}>change User</button>
     </div>
   )
 }
