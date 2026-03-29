@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 
 const App = () => {
   const [a, setA] = useState(10)
-
-  const changeA = () => {
-    console.log("chal gaya")
+  
+  const increment = () => {
     setA(a + 1)
   }
+  const Decrement = () => {
+    setA(a - 1)
+  }
+
   return (
-    <div>value of a is {a} 
-    <button onClick={changeA}>change A</button>
+    <div>
+      <h2>Number is {a}</h2>
+       <button onClick={increment}>Increment</button>
+       <button onClick={Decrement}>Decrement</button>
     </div>
   )
 }
