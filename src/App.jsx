@@ -2,17 +2,16 @@ import React from 'react'
 
 function App() {
 
-    const abc = ()=> {
-        console.log("hello")
-    }
-    
+  let user = "harsh"
 
-
-  const user = "jaiswal"
+  let changeUser = () => {
+    console.log(user)
+    user = "Aryan"
+    console.log(user)
+  }
   return (
-    <div className='main'>my user name is {user}
-
-      <button onClick={abc}>change User</button>
+    <div>username is {user}
+    <button onClick={changeUser}>Change User</button>
     </div>
   )
 }
