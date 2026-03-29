@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function App() {
+const App = () => {
+  const [a, setA] = useState(10)
 
-  let user = "harsh"
-
-  let changeUser = () => {
-    console.log(user)
-    user = "Aryan"
-    console.log(user)
+  const changeA = () => {
+    console.log("chal gaya")
+    setA(a + 1)
   }
   return (
-    <div>username is {user}
-    <button onClick={changeUser}>Change User</button>
+    <div>value of a is {a} 
+    <button onClick={changeA}>change A</button>
     </div>
   )
 }
