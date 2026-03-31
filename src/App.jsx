@@ -1,23 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
+import Header from './components/Header.jsx'
 
 const App = () => {
-  const [name, setName] = useState("")
-  const submitHandler = (e) => {
-    e.preventDefault()
-    console.log(name)
-    setName("")
-
-
-  }
   return (
-    <div className='flex justify-center items-center h-screen'>
-      <form className='flex flex-col gap-2' onSubmit={submitHandler}>
-        <input className='bg-gray-200 rounded border border-gray-400 p-2' type="text" placeholder='Enter Your Name'
-          value={name} onChange={(e)=>{setName(e.target.value)}}
-           
-          />
-        <button className='bg-green-500 rounded text-white p-2' type="submit">Submit</button>
-      </form>
+    <div className='bg-gray-900 min-h-screen text-white'>
+      <Header  />
+      <nav className='flex items-center justify-between py-2 px-8 bg-emerald-500'>
+        <h2 className='text-2xl'>Chanchal Jaiswal</h2>
+        <div className='flex gap-8 items-center'>
+          <a className='text-xl' href="#">About</a>
+          <a className='text-xl' href="#">Servises</a>
+          <a className='text-xl' href="#">Contact</a>
+          <a className='text-xl' href="#">Home</a>
+        </div>
+      </nav>
     </div>
   )
 }
