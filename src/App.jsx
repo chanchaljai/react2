@@ -1,22 +1,24 @@
 import React from 'react'
 
-
-
-
 const App = () => {
+
+   const submitHandler = (e)=> {
+         e.preventDefault()
+    }
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form className="bg-white p-6 rounded shadow-md space-y-4 w-full max-w-md">
-        <input
-          className="w-full px-4 py-3 border border-gray-300 rounded"
-          type="text"
-          placeholder="Enter Your Name"
+    <div className="flex justify-center items-center h-screen">
+      <form className="flex flex-col gap-4 border p-6 rounded-lg" onSubmit={submitHandler}>
+        
+        <input 
+          className="px-4 py-2 border border-gray-400 rounded"
+          type="text" 
+          placeholder="Enter Your Name" 
         />
-        <button
-          className="w-full px-4 py-3 bg-gray-400 text-white rounded hover:bg-gray-500 transition-colors"
-        >
+
+        <button className="px-4 py-2 bg-green-400 rounded text-white">
           Submit
         </button>
+
       </form>
     </div>
   )
