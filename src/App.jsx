@@ -4,7 +4,10 @@ import Header from './components/Header.jsx'
 const App = () => {
   return (
     <div className='bg-gray-900 min-h-screen text-white'>
-      <Header  />
+      
+     <Header />
+     <Header></Header>
+     <Header/>
       <nav className='flex items-center justify-between py-2 px-8 bg-emerald-500'>
         <h2 className='text-2xl'>Chanchal Jaiswal</h2>
         <div className='flex gap-8 items-center'>
