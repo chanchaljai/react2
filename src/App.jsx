@@ -1,16 +1,13 @@
-import React from "react";
-import Header from "./components/Header.jsx";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
+import React from 'react'
+import Card from './components/Card'
 
 const App = () => {
+  const num = 10
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
-      <Header />
-      <Navbar />
-      <Footer />
+    <div>
+      <Card a={num} />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
