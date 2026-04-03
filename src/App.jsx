@@ -1,22 +1,32 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
+  const [data, setData] = useState([]);
+  const getData = async () => {
+    const response = await axios.get(
+      "https://picsum.photos/v2/list?page=2&limit=10",
+    );
+    const data = response.data;
+    setData(data);
+    console.log(data);
+  };
+    useEffect(() => {
+      getData();
+    }, [])
+    
 
-  const getData = async() => {
-   const response = await axios.get('https://picsum.photos/v2/list')
-   console.log(response)
-  }
   return (
     <div className="p-10">
-      <button
-        onClick={getData}
-        className="bg-green-600 text-white rounded text-3xl active:scale-90 hover:cursor-pointer hover:scale-105"
-      >
-        Get Data
-      </button>
+    
       <div className="p-5 mt-5 bg-red-950 text-white">
-        Hello its data save Point
+        {data.map(function (elem,idx) {
+          return(
+          <div key={idx} className="bg-gray-400 text-black flex items-center justify-between w-full px-5 py-2 rounded mb-3"> 
+          <img className="h-40" src={elem.download_url} alt="" />
+          <h2>{elem.author}</h2>
+          </div>);
+        })}
       </div>
     </div>
   );
