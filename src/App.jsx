@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./components/Card";
+import Ex from "./components/Ex";
 
 const App = () => {
   const users = [
@@ -48,6 +49,8 @@ const App = () => {
           return <Card key={idx} name={elem.name} city={elem.city} age={elem.age} profession={elem.profession} profilePic={elem.profilePic}/>
        })}
       </div>
+      <Ex name="Rahul" />
+       
     </>
   );
 };
