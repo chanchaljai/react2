@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from '../context/UserContext'
 
 const Header = () => {
+  const username = useContext(DataContext)
   return (
-    <div><h1>Header</h1></div>
+    <div><h1>Header {username.city}</h1></div>
   )
 }
 
