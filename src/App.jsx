@@ -1,30 +1,53 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const App = () => {
-  const [a, setA] = useState(0);
-  const increment = () => {
-    setA(a + 1);
-  };
-  const decrement = () => {
-    setA(a - 1);
-  };
+
+  const [name, setName] = useState("")
+  const submitHandler = (e) => {
+    e.preventDefault()
+    console.log(e.target[0].value)
+    console.log(e.target[1].value)
+    console.log(e.target[2].value)
+    
+  }
   return (
-    <div className="text-center text-4xl h-screen flex flex-col justify-center">
-      value of a is {a}
-      <div className="flex gap-4 justify-center ">
-        <div>
-          <button onClick={increment} className="bg-green-700 text-white p-2 rounded">
-            increment
+    <div className="h-screen bg-gray-200 flex justify-center items-center">
+      
+      {/* Card */}
+      <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-sm">
+        
+        <form onSubmit={submitHandler} className="flex flex-col gap-4">
+          
+          <input 
+            className="border p-2 rounded focus:ring-2 focus:ring-blue-400"
+            type="text" 
+            placeholder="Enter your name" 
+          />
+
+          <input 
+            className="border p-2 rounded outline-none focus:ring-2 focus:ring-blue-400"
+            type="email" 
+            placeholder="Enter your email" 
+          />
+
+          <input 
+            className="border p-2 rounded outline-none focus:ring-2 focus:ring-blue-400"
+            type="password" 
+            placeholder="Enter your password" 
+          />
+
+          {/* Button */}
+          <button 
+            className="bg-blue-600 text-white p-2 rounded mt-2 hover:bg-blue-700"
+            type="submit"
+          >
+            Submit
           </button>
-        </div>
-        <div>
-          <button onClick={decrement} className="bg-red-700 text-white p-2 rounded">
-            decrement
-          </button>
-        </div>
+
+        </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
