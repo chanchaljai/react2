@@ -9,13 +9,9 @@ const App = () => {
   const data = useContext(DataContext)
   console.log(data);
   return (
-    <div className='text-white font-bold text-6xl underline'>
-      <h1>
-        This is App.js{data.name}
-      </h1>
-      <Header/>
-      <Section/>
-      <Footer/>
+    <div>
+      <Header />
+      
     </div>
   )
 }
