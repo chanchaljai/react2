@@ -1,19 +1,26 @@
-import React, { useContext } from 'react'
-import Header from './components/Header'
-import Section from './components/Section'
-import Footer from './components/Footer'
-import { DataContext } from './context/UserContext'
-
-
+import React from "react";
+import Header from "./components/Header";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Product from "./pages/Product";
 const App = () => {
-  const data = useContext(DataContext)
-  console.log(data);
   return (
-    <div>
-      <Header />
-      
-    </div>
-  )
-}
+    <BrowserRouter>
+      <div>
+        <Header />
 
-export default App
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
+      </Routes>
+      </div>
+    </BrowserRouter>
+  );
+};
+
+export default App;
