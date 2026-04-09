@@ -8,8 +8,6 @@ import UserContext from './context/UserContext.jsx'
 
 createRoot(document.getElementById('root')).render(
 
-<BrowserRouter>
     <App/>
-</BrowserRouter>
   
 )

@@ -5,9 +5,11 @@ const App = () => {
   const [name, setName] = useState("")
   const submitHandler = (e) => {
     e.preventDefault()
-    console.log(e.target[0].value)
-    console.log(e.target[1].value)
-    console.log(e.target[2].value)
+   const user ={
+    name: e.target[0].value,
+    email: e.target[1].value,
+    password: e.target[2].value
+   }
     
   }
   return (
